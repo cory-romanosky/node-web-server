@@ -49,6 +49,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Personal Projects Page',
+        welcomeMessage: 'See more of my personal projects here!',
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to handle request.'
